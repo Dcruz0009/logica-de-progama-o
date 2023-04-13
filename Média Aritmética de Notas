@@ -1,0 +1,29 @@
+algoritmo "Média Aritmética de Notas"
+
+var
+   nota, soma: real
+   contador, qtde_notas: inteiro
+   resposta: caractere
+
+inicio
+   soma <- 0
+   contador <- 0
+
+   repita
+      escreva("Digite a nota: ")
+      leia(nota)
+
+      soma <- soma + nota
+      contador <- contador + 1
+
+      escreva("Deseja inserir outra nota? (S ou N): ")
+      leia(resposta)
+
+   ate (resposta = "nao")  ou (resposta = "n")
+
+   se contador > 0 entao
+      qtde_notas <- contador
+      escreva("A média aritmética das ", qtde_notas, " notas informadas é: ", soma/contador)
+   senao
+      escreva("Nenhuma nota foi informada.")
+   fimse
